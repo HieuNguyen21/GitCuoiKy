@@ -1,19 +1,17 @@
 package com.hieunn2008110163.BaiCuoiKy;
-import java.util.Date;
+import java.time.LocalDate;
 public class hangHoa {
- private String Loai;
+ private Loai Loai;
  private String maHang;
  private String tenHang;
- private Float giaNhap;
- private Date ngayNhap;
+ private double giaNhap;
+ private LocalDate ngayNhap;
  private int  soLuong;
- private String kiTuPB;
 
-
-public String getLoai(){
+public Loai getLoai(){
     return Loai;
  }
- public void setLoai(String Loai) {
+ public void setLoai(Loai Loai) {
      this.Loai = Loai;
  }
 public String getMaHang(){
@@ -28,10 +26,10 @@ public String getMaHang(){
  public void setTenHang(String tenHang) {
      this.tenHang = tenHang;
  }
- public float getGiaNhap(){
+ public double getGiaNhap(){
     return giaNhap;
  }
- public void setGiaNhap(Float giaNhap) {
+ public void setGiaNhap(double giaNhap) {
      this.giaNhap = giaNhap;
  }
  public int getSoLuong(){
@@ -40,30 +38,25 @@ public String getMaHang(){
  public void setSoLuong(int soLuong) {
      this.soLuong = soLuong;
 }
-public Date getNgayNhap(){
+public LocalDate getNgayNhap(){
     return ngayNhap;
  }
-public void setNgayNhap(Date ngayNhap) {
+public void setNgayNhap(LocalDate ngayNhap) {
      this.ngayNhap = ngayNhap;
 }
-public String getPhanBiet(){
-    return kiTuPB;
- }
- public void setPhanBiet(String kiTuPhanBiet) {
-     this.kiTuPB = kiTuPB;
-}
-public void hangHoa(String Loai,String maHang,String tenHang,Float giaNhap,int soLuong,Date ngayNhap,String kiTuPhanBiet){
+public hangHoa(Loai Loai,String maHang,String tenHang,double giaNhap,int soLuong,LocalDate ngayNhap){
 this.Loai=Loai;    
 this.maHang=maHang;
 this.tenHang=tenHang;
 this.giaNhap=giaNhap;
 this.soLuong=soLuong;
 this.ngayNhap=ngayNhap;
-this.kiTuPB=kiTuPB;
 }
-public String toString(){
-    return Loai+"::"+ maHang +"::"+tenHang+"::"+giaNhap+"::"+soLuong+"::"+ngayNhap+"::"+kiTuPB;
+@Override
+public String toString() {
+    return "hangHoa [Loai=" + Loai + ", giaNhap=" + giaNhap + ", maHang=" + maHang + ", ngayNhap=" + ngayNhap
+            + ", soLuong=" + soLuong + ", tenHang=" + tenHang + "]";
 }
-public void getNgayNhap(String ngaynhap2) {
+
 }
-}
+
